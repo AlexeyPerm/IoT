@@ -27,13 +27,15 @@ def send_email_notification(subject, message):
             server.login(EMAIL_ADDRESS, EMAIL_PASSWORD) #логинимся на сервер
             server.send_message(msg)
 
-        print("Email notification sent.")
+        print("Письмо успешно отправленно")
     except Exception as e:
-        print(f"Failed to send email: {e}")
+        print(f"Ошибка при отправке письма: {e}")
 
+#Функция возвращает считанное значение температуры с датчица АЦП (Аналого-цифровой преобразователь)
 def read_temperature():
     try:
-        # Чтение значения с АЦП и преобразование его в температуру (пример на ТСП 100, подключенный к АЦП MCP3008 через делитель напряжения)
+        # Чтение значения с АЦП и преобразование его в температуру
+        # (пример на ТСП 100, подключенный к АЦП MCP3008 через делитель напряжения)
         adc_value = adc.value
         voltage = adc_value * 3.3  # Напряжение АЦП 0...3.3 В
         lowV = (3.3*39.225)/(50+39.225)
@@ -44,14 +46,17 @@ def read_temperature():
         print("Error reading temperature: {}".format(e))
         return None
 
+#Функция для контроля за температурой
 def control_heating_relay(target_temperature):
     current_temperature = read_temperature()
     if current_temperature is not None and current_temperature < target_temperature:
             relay.on()
-            if current_temperature <= target_temperature - 5:
-                send_email_notification("Temperature Alert", f"Temperature is too low: {current_temperature}°C")
+            if current_temperature <= target_temperature - 10:
+                send_email_notification("Внимание: температура ", f"Низкая температура: {current_temperature}°C")
         else:
             relay.off()
+            send_email_notification("Реле отключено", "Произошло отключение реле")
+
 
 @route('/')
 def index():
