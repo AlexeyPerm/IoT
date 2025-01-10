@@ -1,14 +1,35 @@
-import os
-from bottle import Bottle, template, request
-from gpiozero import MCP3008, OutputDevice
-import time
 
+from bottle import Bottle, template, request, route, run
+from gpiozero import MCP3008, OutputDevice
+import smtplib
+from email.mime.text import MIMEText
+
+EMAIL_ADDRESS = "EMAIL_ADDRESS@my_mail.ru"
+EMAIL_PASSWORD = "MY_PASSWORD"
+DST_EMAIL_ADDRESS = "DST_EMAIL_ADDRESS@my_mail.ru"
 
 # Параметры для управления реле и термодатчиком
 relay_pin = 17  # Пин, к которому подключено реле
 setpoint = 25.0  # Уставка температуры в градусах Цельсия
 relay = OutputDevice(relay_pin)
 adc = MCP3008(0)  # Канал АЦП, к которому подключено термосопротивление
+
+def send_email_notification(subject, message):
+    try:
+        msg = MIMEText(message)
+        msg['Subject'] = subject
+        msg['From'] = EMAIL_ADDRESS
+        msg['To'] = DST_EMAIL_ADDRESS
+
+        # Подключение к гугловскому SMTP-серверу (тестировал именно со своего аккаунта)
+        with smtplib.SMTP('smtp.gmail.com', 587) as server:
+            server.starttls()   #шифрование TLS
+            server.login(EMAIL_ADDRESS, EMAIL_PASSWORD) #логинимся на сервер
+            server.send_message(msg)
+
+        print("Email notification sent.")
+    except Exception as e:
+        print(f"Failed to send email: {e}")
 
 def read_temperature():
     try:
@@ -26,9 +47,11 @@ def read_temperature():
 def control_heating_relay(target_temperature):
     current_temperature = read_temperature()
     if current_temperature is not None and current_temperature < target_temperature:
-        relay.on()
-    else:
-        relay.off()
+            relay.on()
+            if current_temperature <= target_temperature - 5:
+                send_email_notification("Temperature Alert", f"Temperature is too low: {current_temperature}°C")
+        else:
+            relay.off()
 
 @route('/')
 def index():
@@ -43,7 +66,7 @@ def set_setpoint():
         global setpoint
         setpoint = new_setpoint
     except ValueError:
-        pass
+        print("Ошибка конвертации в float")
     control_heating_relay(setpoint)
     return template("index", temperature=read_temperature(), setpoint=setpoint)
 
