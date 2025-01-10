@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oven Temperature Control</title>
+</head>
+<body>
+    <h1>Oven Temperature Control</h1>
+    <p>Current Temperature: {{ temperature }} �C</p>
+    <p>Setpoint Temperature: {{ setpoint }} �C</p>
+
+    <form action="/setpoint" method="post">
+        <label for="setpoint">Set Temperature:</label>
+        <input type="number" id="setpoint" name="setpoint" step="0.1" required>
+        <input type="submit" value="Set">
+    </form>
+</body>
+</html>
