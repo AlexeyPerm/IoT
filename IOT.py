@@ -1,8 +1,10 @@
 
-from bottle import Bottle, template, request, route, run
-from gpiozero import MCP3008, OutputDevice
+import json
 import smtplib
 from email.mime.text import MIMEText
+
+from bottle import template, request, route, run
+from gpiozero import MCP3008, OutputDevice
 
 # Параметры для управления реле и термодатчиком
 relay_pin = 17  # Пин, к которому подключено реле
@@ -28,7 +30,7 @@ def send_email_notification(subject, message):
         # Подключение к гугловскому SMTP-серверу (тестировал именно со своего аккаунта)
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()  # шифрование TLS
-            server.login(EMAIL_ADDRESS, email_password)  # логинимся на сервер
+            server.login(src_email_address, email_password)  # логинимся на сервер
             server.send_message(msg)
 
         print("Письмо успешно отправлено")
