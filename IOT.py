@@ -75,7 +75,7 @@ def index():
 
 @route("/setpoint", method="POST")
 def set_setpoint():
-    # Выполнить проверку вводимых данных!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    # Ограничение: setpoint = number, min = 200, max = 1500. Задаётся в index.html
     new_setpoint = request.forms.get("setpoint")
     try:
         new_setpoint = float(new_setpoint)
