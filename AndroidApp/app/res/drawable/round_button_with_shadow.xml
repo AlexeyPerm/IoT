@@ -7,17 +7,17 @@
         android:right="4dp"
         android:bottom="4dp">
         <shape android:shape="oval">
-            <solid android:color="#80000000" /> <!-- Цвет тени -->
+            <solid android:color="#80000000" /> 
             <size
                 android:width="48dp"
                 android:height="48dp" />
         </shape>
     </item>
 
-    <!-- Круглая кнопка -->
+
     <item>
         <shape android:shape="oval">
-            <solid android:color="@color/white" /> <!-- Цвет фона кнопки -->
+            <solid android:color="@color/white" /> 
             <size
                 android:width="48dp"
                 android:height="48dp" />
