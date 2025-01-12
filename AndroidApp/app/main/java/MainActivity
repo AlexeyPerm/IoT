@@ -91,9 +91,9 @@ class MainActivity : ComponentActivity() {
         //tvTemperatureValue.text = "Загрузка..."
 
         // Имитация запроса (возвращает случайное число через 3 секунды)
-        simulateNetworkRequest()
+        //simulateNetworkRequest()
 
-        //fetchRealTemperature()
+        fetchRealTemperature()
     }
 
     private fun simulateNetworkRequest() {
