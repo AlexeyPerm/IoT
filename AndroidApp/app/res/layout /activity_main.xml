@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Круглая кнопка с иконкой -->
+     
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="58dp"
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.99">
 
-            <!-- Иконка внутри CardView -->
+      
             <ImageView
                 android:id="@+id/btnHistory"
                 android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 tools:ignore="UseAppTint" />
         </androidx.cardview.widget.CardView>
 
-        <!-- Надпись "Температура" -->
+
         <TextView
             android:id="@+id/tvTemperatureLabel"
             android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.3" />
 
-        <!-- Значение температуры -->
+       
         <TextView
             android:id="@+id/tvTemperatureValue"
             android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
             app:layout_constraintVertical_bias="0.3"
             android:layout_marginBottom="16dp" />
 
-        <!-- ProgressBar -->
+    
         <ProgressBar
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
