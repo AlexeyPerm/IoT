@@ -3,6 +3,7 @@
 
 .idea
 cred.json
+TEST
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
