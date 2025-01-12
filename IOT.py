@@ -18,9 +18,9 @@ def send_email_notification(subject, message):
         # Данные для авторизации берутся из JSON-файла cred.json
         with open('cred.json') as cred:
             credentials = json.load(cred)
-        src_email_address = "".join(credentials["SRC_EMAIL_ADDRESS"])
-        email_password = "".join(credentials["EMAIL_PASSWORD"])
-        dst_email_address = "".join(credentials["DST_EMAIL_ADDRESS"])
+        src_email_address = credentials["SRC_EMAIL_ADDRESS"]
+        email_password = credentials["EMAIL_PASSWORD"]
+        dst_email_address = credentials["DST_EMAIL_ADDRESS"]
 
         msg = MIMEText(message)
         msg['Subject'] = subject
