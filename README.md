@@ -27,7 +27,7 @@
 - **[Gson](https://github.com/google/gson)** (`com.google.code.gson:gson:2.10.1`) — для сериализации и десериализации JSON.
 
 ### UI
-- **[Jetpack Compose Material 3](https://developer.android.com/jetpack/compose)** (`androidx.compose.material3:material3:1.1.1`) — для создания современного UI с использованием Material Design 3.
+- **[Jetpack Compose Material 3](https://developer.android.com/jetpack/compose)** (`androidx.compose.material3:material3:1.1.1`) — для создания UI с использованием Material Design 3.
 - **[Material Components](https://material.io/develop/android)** (`com.google.android.material:material:1.9.0`) — для использования Material Design компонентов.
 
 ### Графики
