@@ -39,7 +39,7 @@
 #### Андроид приложеине 
 ![Screenshot_20250113_162714_IoT.png](Readme_png/Screenshot_20250113_162714_IoT.png)
 # Технологии
-- **Язык программирования**: Kotlin
+- **Язык программирования**: Kotlin, Python
 
 ### Основные библиотеки:
 - **[Lottie](https://airbnb.io/lottie/)** (`com.airbnb.android:lottie:6.1.0`) — для отображения анимаций в формате JSON.
