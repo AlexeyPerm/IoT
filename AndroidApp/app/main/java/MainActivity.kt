@@ -64,7 +64,7 @@ class MainActivity : ComponentActivity() {
             fetchCurrentTemperature()
            // fetchRealTemperature()
         }
-        
+
 
         // Находим кнопку в макете
         val btnHistory = findViewById<ImageView>(R.id.btnHistory)
@@ -91,9 +91,9 @@ class MainActivity : ComponentActivity() {
         //tvTemperatureValue.text = "Загрузка..."
 
         // Имитация запроса (возвращает случайное число через 3 секунды)
-        //simulateNetworkRequest()
+        simulateNetworkRequest()
 
-        fetchRealTemperature()
+        //fetchRealTemperature()
     }
 
     private fun simulateNetworkRequest() {
@@ -101,9 +101,9 @@ class MainActivity : ComponentActivity() {
         swipeRefreshLayout.isRefreshing = false
         // Используем Handler для задержки
         Handler(Looper.getMainLooper()).postDelayed({
-            // Генерируем случайное число от -30 до +30
-            val randomTemperature = Random.nextInt(-30, 31)
-            updateLottieAnimation(randomTemperature)
+            // Генерируем случайное число от 200 до 1500
+            val randomTemperature = Random.nextInt(200, 1500)
+            
             saveTemperatureToFile(applicationContext, randomTemperature)
             // Обновляем UI
             tvTemperatureValue.text = "$randomTemperature°C"
@@ -134,7 +134,7 @@ class MainActivity : ComponentActivity() {
                     if (temperature != null) {
                         // Обновляем UI с полученной температурой
                         tvTemperatureValue.text = "${temperature}°C"
-                        updateLottieAnimation(temperature.toInt())
+
                         saveTemperatureToFile(applicationContext, temperature.toInt())
                     } else {
                         tvTemperatureValue.text = "N/A"
@@ -154,17 +154,7 @@ class MainActivity : ComponentActivity() {
         })
         swipeRefreshLayout.isRefreshing = false
     }
-    private fun updateLottieAnimation(temperature: Int) {
-        if (temperature < 0) {
-            // Если температура меньше 0, воспроизводим winter.json
-            lottieAnimationView.setAnimation(R.raw.winter) // Используем ресурс
-        } else {
-            // Если температура больше или равна 0, воспроизводим summer.json
-            lottieAnimationView.setAnimation(R.raw.summer) // Используем ресурс
-        }
-        lottieAnimationView.playAnimation() // Запускаем анимацию
-        lottieAnimationView.loop(true) // Зацикливаем анимацию
-    }
+
 }
 private fun saveTemperatureToFile(context: Context, temperature: Int) {
     val file = File(context.getExternalFilesDir(null), "temperature_data.json")
