@@ -1,0 +1,578 @@
+[
+  {
+    "date": "04.01.2025 00:00",
+    "temperature": 0
+  },
+  {
+    "date": "04.01.2025 01:00",
+    "temperature": 200
+  },
+  {
+    "date": "04.01.2025 02:00",
+    "temperature": 750
+  },
+  {
+    "date": "04.01.2025 03:00",
+    "temperature": 525
+  },
+  {
+    "date": "04.01.2025 04:00",
+    "temperature": 450
+  },
+  {
+    "date": "04.01.2025 05:00",
+    "temperature": 375
+  },
+  {
+    "date": "04.01.2025 06:00",
+    "temperature": 450
+  },
+  {
+    "date": "04.01.2025 07:00",
+    "temperature": 300
+  },
+  {
+    "date": "04.01.2025 08:00",
+    "temperature": 150
+  },
+  {
+    "date": "04.01.2025 09:00",
+    "temperature": 75
+  },
+  {
+    "date": "04.01.2025 10:00",
+    "temperature": 0
+  },
+  {
+    "date": "04.01.2025 11:00",
+    "temperature": 75
+  },
+  {
+    "date": "04.01.2025 12:00",
+    "temperature": 0
+  },
+  {
+    "date": "04.01.2025 13:00",
+    "temperature": 225
+  },
+  {
+    "date": "04.01.2025 14:00",
+    "temperature": 300
+  },
+  {
+    "date": "04.01.2025 15:00",
+    "temperature": 225
+  },
+  {
+    "date": "04.01.2025 16:00",
+    "temperature": 450
+  },
+  {
+    "date": "04.01.2025 17:00",
+    "temperature": 525
+  },
+  {
+    "date": "04.01.2025 18:00",
+    "temperature": 600
+  },
+  {
+    "date": "04.01.2025 19:00",
+    "temperature": 750
+  },
+  {
+    "date": "04.01.2025 20:00",
+    "temperature": 750
+  },
+  {
+    "date": "04.01.2025 21:00",
+    "temperature": 825
+  },
+  {
+    "date": "04.01.2025 22:00",
+    "temperature": 750
+  },
+  {
+    "date": "04.01.2025 23:00",
+    "temperature": 975
+  },
+  {
+    "date": "05.01.2025 00:00",
+    "temperature": 825
+  },
+  {
+    "date": "05.01.2025 01:00",
+    "temperature": 1125
+  },
+  {
+    "date": "05.01.2025 02:00",
+    "temperature": 1200
+  },
+  {
+    "date": "05.01.2025 03:00",
+    "temperature": 1275
+  },
+  {
+    "date": "05.01.2025 04:00",
+    "temperature": 1350
+  },
+  {
+    "date": "05.01.2025 05:00",
+    "temperature": 1275
+  },
+  {
+    "date": "05.01.2025 06:00",
+    "temperature": 1500
+  },
+  {
+    "date": "05.01.2025 07:00",
+    "temperature": 1425
+  },
+  {
+    "date": "05.01.2025 08:00",
+    "temperature": 1350
+  },
+  {
+    "date": "05.01.2025 09:00",
+    "temperature": 1500
+  },
+  {
+    "date": "05.01.2025 10:00",
+    "temperature": 1200
+  },
+  {
+    "date": "05.01.2025 11:00",
+    "temperature": 1125
+  },
+  {
+    "date": "05.01.2025 12:00",
+    "temperature": 1050
+  },
+  {
+    "date": "05.01.2025 13:00",
+    "temperature": 900
+  },
+  {
+    "date": "05.01.2025 14:00",
+    "temperature": 975
+  },
+  {
+    "date": "05.01.2025 15:00",
+    "temperature": 825
+  },
+  {
+    "date": "05.01.2025 16:00",
+    "temperature": 750
+  },
+  {
+    "date": "05.01.2025 17:00",
+    "temperature": 825
+  },
+  {
+    "date": "05.01.2025 18:00",
+    "temperature": 900
+  },
+  {
+    "date": "05.01.2025 19:00",
+    "temperature": 825
+  },
+  {
+    "date": "05.01.2025 20:00",
+    "temperature": 1050
+  },
+  {
+    "date": "05.01.2025 21:00",
+    "temperature": 1012
+  },
+  {
+    "date": "05.01.2025 22:00",
+    "temperature": 1012
+  },
+  {
+    "date": "05.01.2025 23:00",
+    "temperature": 1050
+  },
+  {
+    "date": "06.01.2025 00:00",
+    "temperature": 1050
+  },
+  {
+    "date": "06.01.2025 01:00",
+    "temperature": 1087
+  },
+  {
+    "date": "06.01.2025 02:00",
+    "temperature": 1125
+  },
+  {
+    "date": "06.01.2025 03:00",
+    "temperature": 1162
+  },
+  {
+    "date": "06.01.2025 04:00",
+    "temperature": 1050
+  },
+  {
+    "date": "06.01.2025 05:00",
+    "temperature": 1050
+  },
+  {
+    "date": "06.01.2025 06:00",
+    "temperature": 1125
+  },
+  {
+    "date": "06.01.2025 07:00",
+    "temperature": 1125
+  },
+  {
+    "date": "06.01.2025 08:00",
+    "temperature": 1125
+  },
+  {
+    "date": "06.01.2025 09:00",
+    "temperature": 1050
+  },
+  {
+    "date": "06.01.2025 10:00",
+    "temperature": 1125
+  },
+  {
+    "date": "06.01.2025 11:00",
+    "temperature": 1200
+  },
+  {
+    "date": "06.01.2025 12:00",
+    "temperature": 1012
+  },
+  {
+    "date": "06.01.2025 13:00",
+    "temperature": 975
+  },
+  {
+    "date": "06.01.2025 14:00",
+    "temperature": 825
+  },
+  {
+    "date": "06.01.2025 15:00",
+    "temperature": 825
+  },
+  {
+    "date": "06.01.2025 16:00",
+    "temperature": 825
+  },
+  {
+    "date": "06.01.2025 17:00",
+    "temperature": 975
+  },
+  {
+    "date": "06.01.2025 18:00",
+    "temperature": 1050
+  },
+  {
+    "date": "06.01.2025 19:00",
+    "temperature": 1050
+  },
+  {
+    "date": "06.01.2025 20:00",
+    "temperature": 1012
+  },
+  {
+    "date": "06.01.2025 21:00",
+    "temperature": 1012
+  },
+  {
+    "date": "06.01.2025 22:00",
+    "temperature": 1012
+  },
+  {
+    "date": "06.01.2025 23:00",
+    "temperature": 975
+  },
+  {
+    "date": "07.01.2025 00:00",
+    "temperature": 975
+  },
+  {
+    "date": "07.01.2025 01:00",
+    "temperature": 1050
+  },
+  {
+    "date": "07.01.2025 02:00",
+    "temperature": 1050
+  },
+  {
+    "date": "07.01.2025 03:00",
+    "temperature": 1087
+  },
+  {
+    "date": "07.01.2025 04:00",
+    "temperature": 1087
+  },
+  {
+    "date": "07.01.2025 05:00",
+    "temperature": 1125
+  },
+  {
+    "date": "07.01.2025 06:00",
+    "temperature": 1050
+  },
+  {
+    "date": "07.01.2025 07:00",
+    "temperature": 975
+  },
+  {
+    "date": "07.01.2025 08:00",
+    "temperature": 975
+  },
+  {
+    "date": "07.01.2025 09:00",
+    "temperature": 900
+  },
+  {
+    "date": "07.01.2025 10:00",
+    "temperature": 750
+  },
+  {
+    "date": "07.01.2025 11:00",
+    "temperature": 825
+  },
+  {
+    "date": "07.01.2025 12:00",
+    "temperature": 900
+  },
+  {
+    "date": "07.01.2025 13:00",
+    "temperature": 937
+  },
+  {
+    "date": "07.01.2025 14:00",
+    "temperature": 1050
+  },
+  {
+    "date": "07.01.2025 15:00",
+    "temperature": 937
+  },
+  {
+    "date": "07.01.2025 16:00",
+    "temperature": 1012
+  },
+  {
+    "date": "07.01.2025 17:00",
+    "temperature": 1200
+  },
+  {
+    "date": "07.01.2025 18:00",
+    "temperature": 1312
+  },
+  {
+    "date": "07.01.2025 19:00",
+    "temperature": 1237
+  },
+  {
+    "date": "07.01.2025 20:00",
+    "temperature": 1200
+  },
+  {
+    "date": "07.01.2025 21:00",
+    "temperature": 1312
+  },
+  {
+    "date": "07.01.2025 22:00",
+    "temperature": 1087
+  },
+  {
+    "date": "07.01.2025 23:00",
+    "temperature": 1125
+  },
+  {
+    "date": "08.01.2025 00:00",
+    "temperature": 1050
+  },
+  {
+    "date": "08.01.2025 01:00",
+    "temperature": 1050
+  },
+  {
+    "date": "08.01.2025 02:00",
+    "temperature": 975
+  },
+  {
+    "date": "08.01.2025 03:00",
+    "temperature": 675
+  },
+  {
+    "date": "08.01.2025 04:00",
+    "temperature": 600
+  },
+  {
+    "date": "08.01.2025 05:00",
+    "temperature": 675
+  },
+  {
+    "date": "08.01.2025 06:00",
+    "temperature": 562
+  },
+  {
+    "date": "08.01.2025 07:00",
+    "temperature": 487
+  },
+  {
+    "date": "08.01.2025 08:00",
+    "temperature": 450
+  },
+  {
+    "date": "08.01.2025 09:00",
+    "temperature": 525
+  },
+  {
+    "date": "08.01.2025 10:00",
+    "temperature": 375
+  },
+  {
+    "date": "08.01.2025 11:00",
+    "temperature": 300
+  },
+  {
+    "date": "08.01.2025 12:00",
+    "temperature": 225
+  },
+  {
+    "date": "08.01.2025 13:00",
+    "temperature": 75
+  },
+  {
+    "date": "08.01.2025 14:00",
+    "temperature": 150
+  },
+  {
+    "date": "08.01.2025 15:00",
+    "temperature": 225
+  },
+  {
+    "date": "08.01.2025 16:00",
+    "temperature": 150
+  },
+  {
+    "date": "08.01.2025 17:00",
+    "temperature": 300
+  },
+  {
+    "date": "08.01.2025 18:00",
+    "temperature": 450
+  },
+  {
+    "date": "08.01.2025 19:00",
+    "temperature": 525
+  },
+  {
+    "date": "08.01.2025 20:00",
+    "temperature": 487
+  },
+  {
+    "date": "08.01.2025 21:00",
+    "temperature": 562
+  },
+  {
+    "date": "08.01.2025 22:00",
+    "temperature": 750
+  },
+  {
+    "date": "08.01.2025 23:00",
+    "temperature": 825
+  },
+  {
+    "date": "09.01.2025 00:00",
+    "temperature": 900
+  },
+  {
+    "date": "09.01.2025 01:00",
+    "temperature": 975
+  },
+  {
+    "date": "09.01.2025 02:00",
+    "temperature": 937
+  },
+  {
+    "date": "09.01.2025 03:00",
+    "temperature": 1012
+  },
+  {
+    "date": "09.01.2025 04:00",
+    "temperature": 937
+  },
+  {
+    "date": "09.01.2025 05:00",
+    "temperature": 1275
+  },
+  {
+    "date": "09.01.2025 06:00",
+    "temperature": 1312
+  },
+  {
+    "date": "09.01.2025 07:00",
+    "temperature": 1275
+  },
+  {
+    "date": "09.01.2025 08:00",
+    "temperature": 1200
+  },
+  {
+    "date": "09.01.2025 09:00",
+    "temperature": 1125
+  },
+  {
+    "date": "09.01.2025 10:00",
+    "temperature": 1050
+  },
+  {
+    "date": "09.01.2025 11:00",
+    "temperature": 1012
+  },
+  {
+    "date": "09.01.2025 12:00",
+    "temperature": 1012
+  },
+  {
+    "date": "09.01.2025 13:00",
+    "temperature": 1125
+  },
+  {
+    "date": "09.01.2025 14:00",
+    "temperature": 750
+  },
+  {
+    "date": "09.01.2025 15:00",
+    "temperature": 5675
+  },
+  {
+    "date": "09.01.2025 16:00",
+    "temperature": 600
+  },
+  {
+    "date": "09.01.2025 17:00",
+    "temperature": 525
+  },
+  {
+    "date": "09.01.2025 18:00",
+    "temperature": 450
+  },
+  {
+    "date": "09.01.2025 19:00",
+    "temperature": 375
+  },
+  {
+    "date": "09.01.2025 20:00",
+    "temperature": 300
+  },
+  {
+    "date": "09.01.2025 21:00",
+    "temperature": 225
+  },
+  {
+    "date": "09.01.2025 22:00",
+    "temperature": 150
+  },
+  {
+    "date": "09.01.2025 23:00",
+    "temperature": 75
+  }
+]
