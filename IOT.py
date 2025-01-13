@@ -86,6 +86,15 @@ def set_setpoint():
     control_heating_relay(setpoint)
     return template("index", temperature=read_temperature(), setpoint=setpoint)
 
-
+@route('/current_temperature')
+def get_current_temperature():
+    temperature = read_temperature()
+    if temperature is not None:
+        response.content_type = 'application/json'  # Устанавливаем тип контента как JSON
+        return json.dumps({"temperature": temperature})
+    else:
+        response.status = 500  # Ошибка сервера
+        return json.dumps({"error": "Не удалось получить температуру"})
+        
 if __name__ == "__main__":
     run(host='localhost', port=8080)
