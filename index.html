@@ -1,19 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oven Temperature Control</title>
+    <meta name="description" content="Веб-интерфейс для управления температурой печи">
+    <title>Управление температурой печи</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .temperature-display {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .temperature-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        .temperature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .temperature-label {
+            font-size: 16px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .temperature-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .input-hint {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            border-left: 4px solid #c33;
+        }
+    </style>
 </head>
 <body>
-    <h1>Oven Temperature Control</h1>
-    <p>Current Temperature: {{ temperature }} C</p>
-    <p>Setpoint Temperature: {{ setpoint }} C</p>
+    <div class="container">
+        <h1>🔥 Управление температурой печи</h1>
 
-    <form action="/setpoint" method="post">
-        <label for="setpoint">Set Temperature:</label>
-        <input type="number" id="setpoint" name="setpoint" required min="200" max="1500">
-        <input type="submit" value="Set">
-    </form>
+        % if defined('error'):
+        <div class="error-message">{{ error }}</div>
+        % end
+
+        <div class="temperature-display">
+            <div class="temperature-item">
+                <span class="temperature-label">Текущая температура:</span>
+                <span class="temperature-value">{{ temperature or 'N/A' }}°C</span>
+            </div>
+            <div class="temperature-item">
+                <span class="temperature-label">Установка:</span>
+                <span class="temperature-value">{{ setpoint }}°C</span>
+            </div>
+        </div>
+
+        <form action="/setpoint" method="post">
+            <div class="form-group">
+                <label for="setpoint">Установить температуру (°C):</label>
+                <input 
+                    type="number" 
+                    id="setpoint" 
+                    name="setpoint" 
+                    required 
+                    min="200" 
+                    max="1500" 
+                    step="0.1"
+                    placeholder="Введите значение от 200 до 1500"
+                    value="{{ setpoint }}"
+                >
+                <div class="input-hint">Допустимый диапазон: 200 - 1500°C</div>
+            </div>
+            <button type="submit">Установить уставку</button>
+        </form>
+    </div>
 </body>
 </html>
