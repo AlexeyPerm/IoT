@@ -149,8 +149,8 @@ cp cred.json.example cred.json
 
 # Отредактируйте cred.json
 {
-  "SRC_EMAIL_ADDRESS": "your-email@gmail.com",
-  "EMAIL_PASSWORD": "your-app-password",
+  "SRC_EMAIL_ADDRESS": "email@gmail.com",
+  "EMAIL_PASSWORD": "apppassword",
   "DST_EMAIL_ADDRESS": "recipient-email@gmail.com"
 }
 ```
